@@ -9,25 +9,29 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     //This is a connection to the label in our view
     
     @IBOutlet weak var labelDIsplay: UILabel!
     
     //Create an instance (object) of the calcularor class
     var model = Calculator()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Clear the contents of the label
+        
+        labelDIsplay.text = ""
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
     @IBAction func onePressed(_ sender: Any) {
         model.addToNewValue(digit: "1")
         labelDIsplay.text = model.providedValue
@@ -61,8 +65,19 @@ class ViewController: UIViewController {
         labelDIsplay.text = model.providedValue
     }
     @IBAction func ninePressed(_ sender: Any) {
-        model.addToNewValue(digit: "9")
+        model.addToNewValue(digit: "9 ")
         labelDIsplay.text = model.providedValue
     }
+    @IBAction func Multiply(_ sender: Any) {
+        model.multiply()
+    }
+    @IBAction func equals(_ sender: Any) {
+        model.equals()
+        if model.computedValue != nil {
+            labelDIsplay.text = String(format: "%g", model.computedValue!)
+        }
+    }
+    @IBAction func Clear(_ sender: Any) {
+        model.clear()
+    }
 }
-
