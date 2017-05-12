@@ -8,13 +8,11 @@
 
 import Foundation
 
-/**
- Here we define an "enumeration" or "enum"
- 
- This is a custom type, think of it like a "super boolean" except instead of only "true" and "false"
- as possible states, there are five (and only five) possible states, which are the five
- operations listed
- */
+// Here we define an "enumeration" or "enum"
+//
+// This is a custom type, think of it like a "super boolean" except instead of only "true" and "false"
+// as possible states, there are five (and only five) possible states, which are the five
+// operations listed
 enum Operation {
     case multiplication
     case division
