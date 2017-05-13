@@ -114,5 +114,11 @@ class ViewController: UIViewController {
         model.addToNewValue(digit: ".")
         display.text = model.providedValue
     }
+    
+    @IBAction func zeroPressed(_ sender: Any) {
+       model.addToNewValue(digit: "0")
+        updateDisplay()
+    }
+    
 }
 
