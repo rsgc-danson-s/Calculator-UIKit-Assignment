@@ -41,6 +41,8 @@ class Calculator {
     func equals() {
         if operation == .multiplication {
             computedValue = computedValue! * Double(providedValue)!
+        } else if (operation == Operation.division) {
+            computedValue = computedValue!/Double(providedValue)!
         }
         operation = nil
         providedValue = ""
@@ -56,5 +58,18 @@ class Calculator {
     func makeNewValueCurrentValue() {
         computedValue = Double(providedValue)
         providedValue = ""
+    }
+    
+    func updateState() {
+        if computedValue == nil {
+            makeNewValueCurrentValue()
+        } else {
+            equals()
+        }
+    }
+    func divide()  {
+        
+        operation = Operation.division
+        updateState()
     }
 }

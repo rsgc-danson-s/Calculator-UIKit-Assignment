@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     // MARK: Properties
-    var state = Calculator()        // Make a new instance of the Calculator class to keep track data
+    var model = Calculator()        // Make a new instance of the Calculator class to keep track data
                                     // This is the "model" for the model-view-controller relationship
     
     @IBOutlet weak var display: UILabel!
@@ -28,74 +28,78 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onePressed(_ sender: Any) {
-        state.addToNewValue(digit: "1")
+        model.addToNewValue(digit: "1")
         updateDisplay()
     }
 
     @IBAction func twoPressed(_ sender: Any) {
-        state.addToNewValue(digit: "2")
+        model.addToNewValue(digit: "2")
         updateDisplay()
     }
     
     @IBAction func threePressed(_ sender: Any) {
-        state.addToNewValue(digit: "3")
+        model.addToNewValue(digit: "3")
         updateDisplay()
     }
     
     @IBAction func fourPressed(_ sender: Any) {
-        state.addToNewValue(digit: "4")
+        model.addToNewValue(digit: "4")
         updateDisplay()
     }
     
     @IBAction func fivePressed(_ sender: Any) {
-        state.addToNewValue(digit: "5")
+        model.addToNewValue(digit: "5")
         updateDisplay()
     }
 
     @IBAction func sixPressed(_ sender: Any) {
-        state.addToNewValue(digit: "6")
+        model.addToNewValue(digit: "6")
         updateDisplay()
     }
     
     @IBAction func sevenPressed(_ sender: Any) {
-        state.addToNewValue(digit: "7")
+        model.addToNewValue(digit: "7")
         updateDisplay()
     }
 
     @IBAction func eightPressed(_ sender: Any) {
-        state.addToNewValue(digit: "8")
+        model.addToNewValue(digit: "8")
         updateDisplay()
     }
     
     @IBAction func ninePressed(_ sender: Any) {
-        state.addToNewValue(digit: "9")
+        model.addToNewValue(digit: "9")
         updateDisplay()
     }
     
     @IBAction func equals(_ sender: Any) {
-        state.equals()
+        model.equals()
         showNewAnswer()
     }
     
     @IBAction func multiply(_ sender: Any) {
-        state.multiply()
+        model.multiply()
         showNewAnswer()
     }
     
     @IBAction func clearButtonPressed(_ sender: Any) {
-        state.clear()
+        model.clear()
         updateDisplay()
     }
     
     func updateDisplay() {
-        display.text = state.providedValue
+        display.text = model.providedValue
     }
     
     func showNewAnswer() {
         
         // See whether current value can be represented as an integer
-        display.text = String(format: "%g", state.computedValue!)
+        display.text = String(format: "%g", model.computedValue!)
     }
     
+    @IBAction func divide(_ sender: Any) {
+        model.divide()
+        showNewAnswer()
+    }
 }
 
