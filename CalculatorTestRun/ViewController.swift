@@ -101,5 +101,9 @@ class ViewController: UIViewController {
         model.divide()
         showNewAnswer()
     }
+    @IBAction func Add(_ sender: Any) {
+        model.add()
+        showNewAnswer()
+    }
 }
 
