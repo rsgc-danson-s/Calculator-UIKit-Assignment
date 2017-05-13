@@ -26,6 +26,16 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    @IBAction func decimalPressed(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        display.text = model.providedValue
+    }
+    
+    @IBAction func zeroPressed(_ sender: Any) {
+        model.addToNewValue(digit: "0")
+        updateDisplay()
+    }
 
     @IBAction func onePressed(_ sender: Any) {
         model.addToNewValue(digit: "1")
@@ -109,16 +119,12 @@ class ViewController: UIViewController {
         model.subtract()
         showNewAnswer()
     }
-    
-    @IBAction func decimalPressed(_ sender: Any) {
-        model.addToNewValue(digit: ".")
-        display.text = model.providedValue
+    @IBAction func percent(_ sender: Any) {
+        model.percentage()
+        showNewAnswer()
     }
     
-    @IBAction func zeroPressed(_ sender: Any) {
-       model.addToNewValue(digit: "0")
-        updateDisplay()
-    }
+
     
 }
 

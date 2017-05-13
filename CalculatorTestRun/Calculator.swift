@@ -47,7 +47,13 @@ class Calculator {
             computedValue = computedValue!+Double(providedValue)!
         } else if (operation == Operation.subtraction) {
             computedValue = computedValue!-Double(providedValue)!
-        }
+        } else if (operation == Operation.percentage){
+            if computedValue != nil {
+                computedValue = computedValue! * (0.01)
+            } else {
+                computedValue = 0
+            }
+        } else if (operation == Operation.plusMinus)
         operation = nil
         providedValue = ""
     }
@@ -83,6 +89,11 @@ class Calculator {
     
     func subtract() {
         operation = Operation.subtraction
+        updateState()
+    }
+    
+    func percentage() {
+        operation = Operation.percentage
         updateState()
     }
 }
