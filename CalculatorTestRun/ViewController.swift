@@ -105,5 +105,9 @@ class ViewController: UIViewController {
         model.add()
         showNewAnswer()
     }
+    @IBAction func subtract(_ sender: Any) {
+        model.subtract()
+        showNewAnswer()
+    }
 }
 

@@ -173,6 +173,9 @@
                                                 <state key="normal" title="–">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="subtract:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lIW-Ft-dYU"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

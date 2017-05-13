@@ -45,6 +45,8 @@ class Calculator {
             computedValue = computedValue!/Double(providedValue)!
         } else if (operation == Operation.addition) {
             computedValue = computedValue!+Double(providedValue)!
+        } else if (operation == Operation.subtraction) {
+            computedValue = computedValue!-Double(providedValue)!
         }
         operation = nil
         providedValue = ""
@@ -76,6 +78,11 @@ class Calculator {
     }
     func add() {
         operation = Operation.addition
+        updateState()
+    }
+    
+    func subtract() {
+        operation = Operation.subtraction
         updateState()
     }
 }
