@@ -246,6 +246,9 @@
                                                 <state key="normal" title=".">
                                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="decimalPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7qA-YI-Y8Z"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SEi-XG-xIy">
                                                 <rect key="frame" x="282" y="0.0" width="93" height="107"/>

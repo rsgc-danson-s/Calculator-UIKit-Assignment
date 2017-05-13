@@ -109,5 +109,10 @@ class ViewController: UIViewController {
         model.subtract()
         showNewAnswer()
     }
+    
+    @IBAction func decimalPressed(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        display.text = model.providedValue
+    }
 }
 
