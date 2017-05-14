@@ -53,7 +53,14 @@ class Calculator {
             } else {
                 computedValue = 0
             }
-        } else if (operation == Operation.plusMinus)
+        } else if (operation == Operation.plusMinus) {
+            if computedValue != nil {
+                computedValue = computedValue! * (-1)
+            } else {
+                computedValue = 0
+            }
+
+        }
         operation = nil
         providedValue = ""
     }
@@ -94,6 +101,11 @@ class Calculator {
     
     func percentage() {
         operation = Operation.percentage
+        updateState()
+    }
+    
+    func plusMinus() {
+        operation = Operation.plusMinus
         updateState()
     }
 }

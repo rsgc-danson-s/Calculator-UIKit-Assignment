@@ -121,10 +121,15 @@ class ViewController: UIViewController {
     }
     @IBAction func percent(_ sender: Any) {
         model.percentage()
+         model.equals()
         showNewAnswer()
     }
-    
-
+    @IBAction func plusMInus(_ sender: Any) {
+        model.plusMinus()
+        model.equals()
+        showNewAnswer()
+        
+    }
     
 }
 
