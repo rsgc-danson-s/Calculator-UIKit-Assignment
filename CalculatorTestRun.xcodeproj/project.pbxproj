@@ -17,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F2D5CC11EC92E1900A94679 /* Assignment_–_Writing_iOS_Apps_with_UIKit.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Assignment_–_Writing_iOS_Apps_with_UIKit.docx"; sourceTree = "<group>"; };
 		811445571EB20C17003FF430 /* CalculatorTestRun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalculatorTestRun.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8114455A1EB20C17003FF430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8114455C1EB20C17003FF430 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		8114454E1EB20C17003FF430 = {
 			isa = PBXGroup;
 			children = (
+				3F2D5CC11EC92E1900A94679 /* Assignment_–_Writing_iOS_Apps_with_UIKit.docx */,
 				811445591EB20C17003FF430 /* CalculatorTestRun */,
 				811445581EB20C17003FF430 /* Products */,
 			);

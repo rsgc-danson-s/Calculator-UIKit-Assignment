@@ -126,7 +126,7 @@ class ViewController: UIViewController {
     }
     @IBAction func plusMInus(_ sender: Any) {
         model.plusMinus()
-        model.equals()
+       
         showNewAnswer()
         
     }
